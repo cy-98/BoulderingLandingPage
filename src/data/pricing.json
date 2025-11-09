@@ -1,0 +1,216 @@
+{
+  "plans": [
+    {
+      "id": "single",
+      "type": "single",
+      "price": {
+        "zh": "¥128",
+        "en": "￥128"
+      },
+      "duration": {
+        "zh": "当日有效",
+        "en": "Valid for 1 day"
+      },
+      "features": [
+        {
+          "zh": "全场馆设施使用",
+          "en": "Full facility access"
+        },
+        {
+          "zh": "10元攀岩鞋租赁",
+          "en": "Free shoe rental"
+        },
+        {
+          "zh": "免费储物柜",
+          "en": "Free locker"
+        }
+      ]
+    },
+    {
+      "id": "monthly",
+      "type": "monthly",
+      "price": {
+        "zh": "¥980",
+        "en": "￥980"
+      },
+      "duration": {
+        "zh": "30天有效",
+        "en": "Valid for 30 days"
+      },
+      "features": [
+        {
+          "zh": "无限次入场",
+          "en": "Unlimited access"
+        },
+        {
+          "zh": "免费攀岩鞋租赁",
+          "en": "Free shoe rental"
+        },
+        {
+          "zh": "免费储物柜",
+          "en": "Free locker"
+        },
+        {
+          "zh": "会员活动优先参与",
+          "en": "Priority event access"
+        }
+      ]
+    },
+    {
+      "id": "annual",
+      "type": "annual",
+      "price": {
+        "zh": "¥4800",
+        "en": "¥4800"
+      },
+      "duration": {
+        "zh": "365天有效",
+        "en": "Valid for 365 days"
+      },
+      "features": [
+        {
+          "zh": "无限次入场",
+          "en": "Unlimited access"
+        },
+        {
+          "zh": "免费攀岩鞋租赁",
+          "en": "Free shoe rental"
+        },
+        {
+          "zh": "专属储物柜",
+          "en": "Personal locker"
+        },
+        {
+          "zh": "会员活动优先参与",
+          "en": "Priority event access"
+        }
+      ],
+      "popular": true
+    }
+  ],
+  "courses": [
+    {
+      "id": "small-class-10",
+      "type": "small-class-10",
+      "price": {
+        "zh": "¥4,000",
+        "en": "¥4,000"
+      },
+      "duration": {
+        "zh": "10次小班课",
+        "en": "10 Small Group Classes"
+      }
+    },
+    {
+      "id": "small-class-20",
+      "type": "small-class-20",
+      "price": {
+        "zh": "¥6,999",
+        "en": "¥6,999"
+      },
+      "duration": {
+        "zh": "20次小班课",
+        "en": "20 Small Group Classes"
+      }
+    },
+    {
+      "id": "group-class-1",
+      "type": "group-class-1",
+      "price": {
+        "zh": "¥1,200",
+        "en": "¥1,200"
+      },
+      "duration": {
+        "zh": "一期团课",
+        "en": "Group Class Session 1"
+      }
+    },
+    {
+      "id": "group-class-2",
+      "type": "group-class-2",
+      "price": {
+        "zh": "¥1,960",
+        "en": "¥1,960"
+      },
+      "duration": {
+        "zh": "二期团课",
+        "en": "Group Class Session 2"
+      }
+    },
+    {
+      "id": "private-single",
+      "type": "private-single",
+      "price": {
+        "zh": "¥650",
+        "en": "¥650"
+      },
+      "duration": {
+        "zh": "单次私教",
+        "en": "Single Private Lesson"
+      }
+    },
+    {
+      "id": "private-10",
+      "type": "private-10",
+      "price": {
+        "zh": "¥5,400",
+        "en": "¥5,400"
+      },
+      "duration": {
+        "zh": "10次私教",
+        "en": "10 Private Lessons"
+      }
+    },
+    {
+      "id": "beginner-single",
+      "type": "beginner-single",
+      "price": {
+        "zh": "¥258",
+        "en": "¥258"
+      },
+      "duration": {
+        "zh": "新手课",
+        "en": "Beginner Class"
+      }
+    },
+    {
+      "id": "beginner-duo",
+      "type": "beginner-duo",
+      "price": {
+        "zh": "¥458",
+        "en": "¥458"
+      },
+      "duration": {
+        "zh": "双人新手课",
+        "en": "Duo Beginner Class"
+      }
+    }
+  ],
+  "rentals": [
+    {
+      "id": "shoe-rental",
+      "type": "shoe-rental",
+      "price": {
+        "zh": "¥10",
+        "en": "¥10"
+      },
+      "duration": {
+        "zh": "攀岩鞋租赁",
+        "en": "Climbing Shoe Rental"
+      }
+    },
+    {
+      "id": "chalk-rental",
+      "type": "chalk-rental",
+      "price": {
+        "zh": "¥10",
+        "en": "¥10"
+      },
+      "duration": {
+        "zh": "镁粉租赁",
+        "en": "Chalk Rental"
+      }
+    }
+  ]
+}
+

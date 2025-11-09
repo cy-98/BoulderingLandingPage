@@ -1,0 +1,115 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "date": "2025-11-10",
+      "type": "routeSetting",
+      "venue": "venue1",
+      "title": {
+        "zh": "国贸店换线",
+        "en": "Guomao Route Setting"
+      },
+      "time": "09:00-12:00"
+    },
+    {
+      "id": 2,
+      "date": "2025-11-12",
+      "type": "event",
+      "venue": "venue2",
+      "title": {
+        "zh": "初学者工作坊",
+        "en": "Beginner Workshop"
+      },
+      "time": "19:00-21:00"
+    },
+    {
+      "id": 3,
+      "date": "2025-11-15",
+      "type": "routeSetting",
+      "venue": "venue2",
+      "title": {
+        "zh": "三里屯店换线",
+        "en": "Sanlitun Route Setting"
+      },
+      "time": "09:00-12:00"
+    },
+    {
+      "id": 4,
+      "date": "2025-11-18",
+      "type": "event",
+      "venue": "venue1",
+      "title": {
+        "zh": "周末攀岩比赛",
+        "en": "Weekend Competition"
+      },
+      "time": "14:00-18:00"
+    },
+    {
+      "id": 5,
+      "date": "2025-11-20",
+      "type": "routeSetting",
+      "venue": "venue3",
+      "title": {
+        "zh": "望京店换线",
+        "en": "Wangjing Route Setting"
+      },
+      "time": "09:00-12:00"
+    },
+    {
+      "id": 6,
+      "date": "2025-11-25",
+      "type": "event",
+      "venue": "venue3",
+      "title": {
+        "zh": "社区聚会",
+        "en": "Community Gathering"
+      },
+      "time": "18:00-20:00"
+    },
+    {
+      "id": 7,
+      "date": "2025-12-01",
+      "type": "routeSetting",
+      "venue": "venue1",
+      "title": {
+        "zh": "国贸店换线",
+        "en": "Guomao Route Setting"
+      },
+      "time": "09:00-12:00"
+    },
+    {
+      "id": 8,
+      "date": "2025-12-05",
+      "type": "event",
+      "venue": "venue2",
+      "title": {
+        "zh": "进阶技巧课程",
+        "en": "Advanced Technique Class"
+      },
+      "time": "18:00-20:00"
+    },
+    {
+      "id": 9,
+      "date": "2025-12-10",
+      "type": "routeSetting",
+      "venue": "venue3",
+      "title": {
+        "zh": "望京店换线",
+        "en": "Wangjing Route Setting"
+      },
+      "time": "09:00-12:00"
+    },
+    {
+      "id": 10,
+      "date": "2025-12-15",
+      "type": "event",
+      "venue": "venue1",
+      "title": {
+        "zh": "年终攀岩大赛",
+        "en": "Year-End Competition"
+      },
+      "time": "13:00-18:00"
+    }
+  ]
+}
+

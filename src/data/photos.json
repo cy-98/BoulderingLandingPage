@@ -1,0 +1,128 @@
+{
+  "photos": [
+    {
+      "id": 1,
+      "venue": "venue1",
+      "emoji": "🧗",
+      "color": "from-orange-200 to-red-200",
+      "alt": {
+        "zh": "攀岩运动",
+        "en": "Climbing"
+      }
+    },
+    {
+      "id": 2,
+      "venue": "venue2",
+      "emoji": "💪",
+      "color": "from-purple-200 to-pink-200",
+      "alt": {
+        "zh": "力量训练",
+        "en": "Strength Training"
+      }
+    },
+    {
+      "id": 3,
+      "venue": "venue3",
+      "emoji": "🏔️",
+      "color": "from-blue-200 to-cyan-200",
+      "alt": {
+        "zh": "攀岩墙",
+        "en": "Climbing Wall"
+      }
+    },
+    {
+      "id": 4,
+      "venue": "venue1",
+      "emoji": "🎯",
+      "color": "from-green-200 to-teal-200",
+      "alt": {
+        "zh": "目标挑战",
+        "en": "Goal Challenge"
+      }
+    },
+    {
+      "id": 5,
+      "venue": "venue2",
+      "emoji": "🏆",
+      "color": "from-yellow-200 to-orange-200",
+      "alt": {
+        "zh": "比赛获奖",
+        "en": "Competition Winner"
+      }
+    },
+    {
+      "id": 6,
+      "venue": "venue3",
+      "emoji": "🌟",
+      "color": "from-indigo-200 to-purple-200",
+      "alt": {
+        "zh": "精彩瞬间",
+        "en": "Amazing Moment"
+      }
+    },
+    {
+      "id": 7,
+      "venue": "venue1",
+      "emoji": "⚡",
+      "color": "from-red-200 to-pink-200",
+      "alt": {
+        "zh": "速度挑战",
+        "en": "Speed Challenge"
+      }
+    },
+    {
+      "id": 8,
+      "venue": "venue2",
+      "emoji": "🔥",
+      "color": "from-orange-200 to-amber-200",
+      "alt": {
+        "zh": "热情攀岩",
+        "en": "Passionate Climbing"
+      }
+    },
+    {
+      "id": 9,
+      "venue": "venue3",
+      "emoji": "🎪",
+      "color": "from-pink-200 to-rose-200",
+      "alt": {
+        "zh": "社区活动",
+        "en": "Community Event"
+      }
+    },
+    {
+      "id": 10,
+      "venue": "venue1",
+      "emoji": "🚀",
+      "color": "from-cyan-200 to-blue-200",
+      "alt": {
+        "zh": "突破极限",
+        "en": "Breaking Limits"
+      }
+    },
+    {
+      "id": 11,
+      "venue": "venue2",
+      "emoji": "🎨",
+      "color": "from-purple-200 to-indigo-200",
+      "alt": {
+        "zh": "创意线路",
+        "en": "Creative Routes"
+      }
+    },
+    {
+      "id": 12,
+      "venue": "venue3",
+      "emoji": "👏",
+      "color": "from-green-200 to-emerald-200",
+      "alt": {
+        "zh": "团队协作",
+        "en": "Teamwork"
+      }
+    }
+  ]
+}
+
+
+
+
