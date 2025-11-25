@@ -5,6 +5,7 @@ import LanguageToggle from './LanguageToggle'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 
 interface Venue {
   id: string
@@ -55,8 +56,25 @@ export default function Navigation({ venues, currentVenueIndex, setCurrentVenueI
     >
       <div className="container mx-auto px-2 sm:px-3 lg:px-4">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Left: Venue Selector + Navigation Links */}
+          {/* Left: Logo + Venue Selector + Navigation Links */}
           <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
+            {/* Logo */}
+            <Link
+              href="/"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/assets/logo.png"
+                alt="Logo"
+                width={40}
+                height={40}
+                className="object-contain"
+              />
+            </Link>
+
+            {/* Divider */}
+            <div className="h-6 w-px bg-gray-600"></div>
+
             {venues.map((venue, index) => (
               <button
                 key={venue.id}
@@ -125,14 +143,6 @@ export default function Navigation({ venues, currentVenueIndex, setCurrentVenueI
               }`}></span>
             </Link>
           </div>
-
-          {/* Center: Logo (hidden on mobile) */}
-          <Link
-            href="/"
-            className="hidden md:block text-xl font-bold text-brand-orange hover:text-brand-orange-light transition-colors absolute left-1/2 transform -translate-x-1/2"
-          >
-            {t('hero.title')}
-          </Link>
 
           {/* Right: Language Toggle & Menu Button */}
           <div className="flex items-center gap-2">

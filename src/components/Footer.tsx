@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -63,9 +64,15 @@ export default function Footer() {
                 {t('footer.wechat.scan')}
               </p>
 
-              {/* QR Code Placeholder */}
-              <div className="bg-gradient-to-br from-brand-gray-medium to-brand-black aspect-square rounded-sm flex items-center justify-center mb-6 shadow-inner border border-brand-orange/20">
-                <span className="text-8xl">📱</span>
+              {/* QR Code */}
+              <div className="bg-white aspect-square rounded-sm flex items-center justify-center mb-6 shadow-inner border border-brand-orange/20 p-4">
+                <Image
+                  src="/assets/service_account_qrcode.jpg"
+                  alt="WeChat QR Code"
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-contain"
+                />
               </div>
 
               <p className="text-sm text-gray-400 mb-4">

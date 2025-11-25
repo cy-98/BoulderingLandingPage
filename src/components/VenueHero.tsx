@@ -120,7 +120,7 @@ export default function VenueHero({ venues, currentVenueIndex, setCurrentVenueIn
               <h3 className="pb-px text-xs font-bold text-brand-orange uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t('venue.phone')}</h3>
               <a 
                 href={`tel:${currentVenue.phone}`}
-                className="text-xs text-brand-orange hover:text-brand-orange-light font-bold hover:underline transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                className="text-xs text-white hover:text-white/80 font-bold underline transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
               >
                 {currentVenue.phone}
               </a>

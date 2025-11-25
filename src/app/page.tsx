@@ -30,12 +30,12 @@ export default function Home() {
       </section>
 
       {/* Photos Section */}
-      <section id="photos" className="bg-brand-gray-medium">
+      {/* <section id="photos" className="bg-brand-gray-medium">
         <PhotoGallery 
           venues={venues}
           currentVenueIndex={currentVenueIndex}
         />
-      </section>
+      </section> */}
 
       {/* Footer */}
       <div className="snap-start">

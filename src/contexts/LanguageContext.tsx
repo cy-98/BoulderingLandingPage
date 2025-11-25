@@ -33,6 +33,8 @@ const translations = {
     'venue.facility.restroom': '卫生间',
     'venue.facility.shower': '淋浴',
     'venue.facility.training': 'T板训练区',
+    'venue.facility.tboard': 'T板训练区',
+    'venue.facility.freeParking': '免费停车',
     'venue.viewDetails': '查看详情',
     
     // Venue Details (Sample data)
@@ -101,7 +103,7 @@ const translations = {
     'footer.wechat': '微信公众号',
     'footer.instagram': 'Instagram',
     'footer.contact': '联系我们',
-    'footer.copyright': '© 2025 嗨抱攀岩. 保留所有权利.',
+    'footer.copyright': '© 2025 嘿抱攀岩. 保留所有权利.',
     'footer.wechat.scan': '扫描二维码关注我们',
     'footer.wechat.close': '关闭',
   },
@@ -113,7 +115,7 @@ const translations = {
     'nav.calendar': 'Calendar',
     
     // Hero Section
-    'hero.title': 'Hi Boulder',
+    'hero.title': 'HEY BOULDERING',
     'hero.subtitle': 'Challenge Yourself, Reach the Peak',
     'hero.description': 'Professional bouldering gyms with top facilities and community experience',
     
@@ -127,6 +129,8 @@ const translations = {
     'venue.facility.restroom': 'Restroom',
     'venue.facility.shower': 'Shower',
     'venue.facility.training': 'Training Board',
+    'venue.facility.tboard': 'Tension Board',
+    'venue.facility.freeParking': 'Free Parking',
     'venue.viewDetails': 'View Details',
     
     // Venue Details (Sample data)

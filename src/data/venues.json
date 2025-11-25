@@ -3,18 +3,18 @@
     {
       "id": "venue1",
       "name": {
-        "zh": "嘿抱",
-        "en": "Hey Bao"
+        "zh": "嘿抱外滩",
+        "en": "HeyBouldering Bund"
       },
       "address": {
         "zh": "中山南路800弄21号绿地外滩潮方LG2-204号",
-        "en": "No. LG2-204, Chaofang, Greenland Bund, No. 21, Lane 800, Shannan Road"
+        "en": "No. LG2-204, Chaofang, No. 21, Lane 800, Zhongshan South Road"
       },
       "hours": {
         "zh": "周一至周日 10:00-22:00",
         "en": "Mon-Sun 10:00-22:00"
       },
-      "phone": "130-4410-0935",
+      "phone": "17621132671",
       "imagePlaceholder": "🧗",
       "image": "/assets/bd1.jpg",
       "photos": [
@@ -33,24 +33,23 @@
         "/assets/HHH02459.JPG",
         "/assets/HHH02461.JPG"
       ],
-      "facilities": [
-      ]
+      "facilities": ["freeParking"]
     },
     {
       "id": "venue2",
       "name": {
-        "zh": "嘿抱2",
-        "en": "Hey Bao 2"
+        "zh": "嘿抱万象城",
+        "en": "HeyBouldering MixC"
       },
       "address": {
-        "zh": "上海市普陀区长风新村街道宁夏路777号D区2楼",
-        "en": "2nd Floor, Area D, No. 777, Ningxia Road, Changfeng Xincun Street, Putuo District, Shanghai"
+        "zh": "上海市闵行区吴中路1599号上海万象城 L339C",
+        "en": "L339C, Shanghai MixC, No. 1599, Wuzhong Road, Minhang District, Shanghai"
       },
       "hours": {
-        "zh": "周一至周日 10:00-23:00",
-        "en": "Mon-Sun 10:00-23:00"
+        "zh": "周一至周日 10:00-22:00",
+        "en": "Mon-Sun 10:00-22:00"
       },
-      "phone": "130-4410-0935",
+      "phone": "17621132671",
       "imagePlaceholder": "💪",
       "image": "/assets/bd2.jpg",
       "photos": [
@@ -63,27 +62,23 @@
         "/assets/HHH02581.JPG",
         "/assets/HHH02588.JPG"
       ],
-      "facilities": [
-        "restroom",
-        "shower",
-        "training"
-      ]
+      "facilities": ["restroom", "shower", "training"]
     },
     {
       "id": "venue3",
       "name": {
         "zh": "粉抱",
-        "en": "Pink Bao"
+        "en": "PinkBouldering"
       },
       "address": {
-        "zh": "上海市普陀区长风新村街道宁夏路777号D区2楼",
-        "en": "2nd Floor, Area D, No. 777, Ningxia Road, Changfeng Xincun Street, Putuo District, Shanghai"
+        "zh": "上海市普陀区宁夏路777号D区2楼",
+        "en": "2nd Floor, Area D, No. 777, Ningxia Road, Putuo District, Shanghai"
       },
       "hours": {
         "zh": "周一至周日 09:00-22:00",
         "en": "Mon-Sun 09:00-22:00"
       },
-      "phone": "130-4410-0935",
+      "phone": "17621132671",
       "imagePlaceholder": "🌸",
       "image": "/assets/image.png",
       "photos": [
@@ -97,10 +92,7 @@
         "/assets/HHH02667.JPG",
         "/assets/HHH02729.JPG"
       ],
-      "facilities": [
-        "training"
-      ]
+      "facilities": ["training"]
     }
   ]
 }
-
