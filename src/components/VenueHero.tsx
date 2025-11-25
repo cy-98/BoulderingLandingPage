@@ -1,11 +1,11 @@
 'use client'
 
 import { useLanguage } from '@/contexts/LanguageContext'
-import { useState, useRef, useEffect } from 'react'
 
 interface Venue {
   id: string
   name: { zh: string; en: string }
+  location: { zh: string; en: string } | null
   address: { zh: string; en: string }
   hours: { zh: string; en: string }
   phone: string
@@ -25,138 +25,38 @@ export default function VenueHero({ venues, currentVenueIndex, setCurrentVenueIn
   const { language, t } = useLanguage()
   const currentVenue = venues[currentVenueIndex]
   
-  // 根据当前场馆获取对应的照片列表，首页最多显示4张
-  const allPhotos = currentVenue.photos && currentVenue.photos.length > 0 
-    ? currentVenue.photos 
-    : [currentVenue.image] // 如果没有photos数组，使用默认image
-  const heroImages = allPhotos.slice(0, 4) // 限制首页最多显示4张
-  
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  
-  // 当切换场馆时，重置图片索引
-  useEffect(() => {
-    setCurrentImageIndex(0)
-  }, [currentVenueIndex])
-  const [touchStart, setTouchStart] = useState<number | null>(null)
-  const [touchEnd, setTouchEnd] = useState<number | null>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  // 最小滑动距离（px）
-  const minSwipeDistance = 50
-
-  const onTouchStart = (e: React.TouchEvent) => {
-    setTouchEnd(null)
-    setTouchStart(e.targetTouches[0].clientX)
-  }
-
-  const onTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX)
-  }
-
-  const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return
-    
-    const distance = touchStart - touchEnd
-    const isLeftSwipe = distance > minSwipeDistance
-    const isRightSwipe = distance < -minSwipeDistance
-
-    if (isLeftSwipe) {
-      // 左滑，下一张
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
-    }
-    
-    if (isRightSwipe) {
-      // 右滑，上一张
-      setCurrentImageIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length)
-    }
-  }
-
-  const facilityIcons: Record<string, string> = {
-    restroom: '🚻',
-    shower: '🚿',
-    training: '🏋️'
-  }
+  // 只显示第一张图片
+  const heroImage = currentVenue.photos && currentVenue.photos.length > 0 
+    ? currentVenue.photos[0] 
+    : currentVenue.image
 
   return (
-    <section className="snap-start min-h-screen bg-brand-black pt-16 sm:pt-20">
-      {/* Full Screen Image Card with Swipe Support */}
+    <section className="snap-start bg-brand-black pt-16 sm:pt-20">
+      {/* Hero Image - 2/3 of screen height */}
       <div 
-        ref={containerRef}
-        className="relative h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] bg-cover bg-center bg-no-repeat transition-all duration-500 ease-in-out"
-        style={{ backgroundImage: `url(${heroImages[currentImageIndex]})` }}
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
+        className="relative h-[60vh] sm:h-[65vh] md:h-[70vh] bg-cover bg-center bg-no-repeat overflow-hidden"
+        style={{ 
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 40%'
+        }}
       >
-        {/* Dark gradient overlay - stronger at bottom for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+        {/* Dark gradient overlay - lighter for better image visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent"></div>
         
-        {/* Venue Information - Bottom Left Corner - Compact */}
-        <div className="absolute bottom-4 left-4 z-20 max-w-xs">
-          <div className="space-y-1.5">
-            {/* Venue Name */}
-            <h2 className="text-xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-2">
-              {currentVenue.name[language]}
-            </h2>
-            
-            {/* Address */}
-            <div>
-              <h3 className="pb-px text-xs font-bold text-brand-orange uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t('venue.address')}</h3>
-              <p className="text-xs text-white leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                {currentVenue.address[language]}
-              </p>
-            </div>
-
-            {/* Hours */}
-            <div>
-              <h3 className="pb-px text-xs font-bold text-brand-orange uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t('venue.hours')}</h3>
-              <p className="text-xs text-white leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                {currentVenue.hours[language]}
-              </p>
-            </div>
-
-            {/* Phone */}
-            <div>
-              <h3 className="pb-px text-xs font-bold text-brand-orange uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t('venue.phone')}</h3>
-              <a 
-                href={`tel:${currentVenue.phone}`}
-                className="text-xs text-white hover:text-white/80 font-bold underline transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
-              >
-                {currentVenue.phone}
-              </a>
-            </div>
-
-            {/* Facilities */}
-            <div style={{ display: currentVenue.facilities.length > 0 ? 'block' : 'none' }}>
-              <h3 className="pb-px text-xs font-bold text-brand-orange uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{t('venue.facilities')}</h3>
-              <div className="flex flex-wrap gap-1">
-                {currentVenue.facilities.map((facility) => (
-                  <span 
-                    key={facility}
-                    className="inline-block px-2 py-0.5 bg-brand-orange/80 text-white text-xs font-medium rounded-sm"
-                  >
-                    {t(`venue.facility.${facility}`)}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Image Slider Buttons - Bottom Right Corner */}
-        <div className="absolute bottom-4 right-4 flex gap-2 z-20">
-          {heroImages.map((_, index) => (
-            <div
-              key={index}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`transition-all duration-300 cursor-pointer ${
-                index === currentImageIndex
-                  ? 'w-10 h-0.5 bg-brand-orange shadow-md'
-                  : 'w-10 h-0.5 bg-white/40 hover:bg-white/60'
-              }`}
-              aria-label={`Go to image ${index + 1}`}
-            />
-          ))}
+        {/* Venue Name - Left-Center, Vertically Centered */}
+        <div className="absolute left-8 sm:left-16 md:left-24 lg:left-32 top-1/2 -translate-y-1/2 z-20 max-w-2xl">
+          {/* Location - Secondary Header (only if location exists) */}
+          {currentVenue.location && (
+            <p className="font-heading text-3xl sm:text-4xl md:text-5xl font-semibold text-brand-pink uppercase mb-4 tracking-[0.1em] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              {currentVenue.location[language]}
+            </p>
+          )}
+          
+          {/* Venue Name */}
+          <h1 className="font-hero text-[80px] sm:text-[100px] md:text-[120px] lg:text-[140px] font-black text-white uppercase leading-none tracking-[0.05em] drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
+            {currentVenue.name[language]}
+          </h1>
         </div>
       </div>
     </section>

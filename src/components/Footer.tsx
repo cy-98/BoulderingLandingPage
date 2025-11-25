@@ -1,46 +1,76 @@
-'use client'
+"use client";
 
-import { useLanguage } from '@/contexts/LanguageContext'
-import { useState } from 'react'
-import Image from 'next/image'
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useState } from "react";
+import Image from "next/image";
 
 export default function Footer() {
-  const { t } = useLanguage()
-  const [showWeChatModal, setShowWeChatModal] = useState(false)
+  const { t } = useLanguage();
+  const [showWeChatModal, setShowWeChatModal] = useState(false);
 
   return (
     <>
       <footer className="bg-brand-black text-white py-12 sm:py-16 border-t border-brand-gray-light/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-
             {/* Social Media */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">{t('footer.followUs')}</h4>
+              <p className="text-lg font-semibold mb-4">
+                {t("footer.followUs")}
+              </p>
               <div className="flex gap-4">
                 {/* Instagram */}
                 <a
                   href="https://www.instagram.com/heybouldering?igsh=amg0MzJ2c2oydjly&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-sm flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
+                  className="w-12 h-12 rounded-sm flex items-center justify-center hover:scale-110 transition-transform duration-300 text-brand-pink"
                   aria-label="Instagram"
                 >
-                  <span className="text-2xl">📷</span>
+                  <svg
+                    className="w-7 h-7"
+                    viewBox="0 0 1024 1024"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M905.57421875 511.91210937v166.46484376c-1.0546875 63.54492188-28.38867188 123.83789063-75.5859375 166.46484374-26.3671875 27.59765625-60.8203125 46.14257813-98.4375 52.99804688-16.96289063 6.24023438-34.98046875 8.7890625-52.99804688 7.55859375h-333.10546874c-50.80078125 2.109375-100.1953125-17.13867188-136.23046876-52.99804687-47.8125-34.27734375-80.33203125-85.86914063-90.87890624-143.78906251V345.359375c0-91.23046875 53.26171875-174.0234375 136.23046874-211.90429688 29.53125-8.70117188 60.02929688-13.79882813 90.87890626-15.11718749h333.01757812c49.30664063-1.23046875 97.55859375 14.85351563 136.23046875 45.43945312 43.9453125 33.31054688 73.65234375 82.00195313 83.3203125 136.23046875 0 15.1171875 7.55859375 30.32226563 7.55859375 45.43945313v166.46484374z m-726.59179688 0v166.46484376c-1.23046875 15.55664063 1.40625 31.11328125 7.55859375 45.43945312 18.6328125 72.24609375 84.375 122.34375 158.90625 121.11328125h340.6640625c28.38867188 1.49414063 55.98632813-9.58007813 75.5859375-30.32226563 50.18554688-29.97070313 79.36523438-85.51757813 75.5859375-143.78906249V345.359375c1.93359375-13.09570313-0.703125-26.45507813-7.55859375-37.79296875C813.90429688 232.5078125 747.546875 178.71875 670.73046875 178.89453125H337.88867187c-13.09570313-1.14257813-26.19140625 1.49414063-37.79296874 7.55859375-35.06835938 11.86523438-66.35742188 32.78320313-90.87890626 60.55664063-21.26953125 28.30078125-31.90429688 63.10546875-30.32226562 98.43749999l0.08789062 166.46484376z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M723.90429688 511.91210937C721.44335938 627.92773438 628.015625 721.35546875 512 723.81640625c-116.015625-2.4609375-209.44335938-95.88867188-211.90429688-211.90429688 2.4609375-116.015625 95.88867188-209.44335938 211.90429688-211.90429687 116.80664063-0.17578125 211.72851563 94.30664063 211.90429688 211.20117188v0.70312499z m-363.25195313 0c0 83.58398438 67.76367188 151.34765625 151.34765625 151.34765626S663.43554688 595.49609375 663.43554688 511.91210937 595.671875 360.4765625 512 360.4765625c-83.49609375 0.26367188-151.171875 67.93945313-151.34765625 151.43554688zM784.4609375 269.68554687c-1.0546875 16.25976563-14.0625 29.1796875-30.32226563 30.32226563-16.25976563-1.14257813-29.1796875-14.0625-30.23437499-30.32226562 1.0546875-16.25976563 14.0625-29.1796875 30.32226562-30.32226563 16.25976563 1.14257813 29.1796875 14.0625 30.234375 30.32226563z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
                 </a>
 
                 {/* WeChat */}
                 <button
                   onClick={() => setShowWeChatModal(true)}
-                  className="w-12 h-12 bg-green-600 rounded-sm flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
+                  className="w-12 h-12 rounded-sm flex items-center justify-center hover:scale-110 transition-transform duration-300 text-brand-pink"
                   aria-label="WeChat"
                 >
-                  <span className="text-2xl">💬</span>
+                  <svg
+                    className="w-7 h-7"
+                    viewBox="0 0 1194 1024"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M728.064 535.296a35.498667 35.498667 0 1 1-70.912 0 35.498667 35.498667 0 0 1 70.912 0M974.08 535.296a35.498667 35.498667 0 1 1-70.997333 0 35.498667 35.498667 0 0 1 70.997333 0"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M902.144 930.133333l-6.656 1.450667a594.176 594.176 0 0 1-18.602667 3.669333c-26.453333 4.778667-44.629333 6.826667-64 6.144-167.850667-5.546667-298.666667-87.893333-351.061333-218.709333a446.464 446.464 0 0 1-6.826667-19.114667l-1.962666-6.058666a199.68 199.68 0 0 1-3.84-13.653334 338.858667 338.858667 0 0 1-9.216-75.690666c0-171.008 157.013333-305.92 354.304-314.709334l8.874666-0.682666c7.850667-0.597333 12.970667-0.853333 18.773334-0.853334H836.693333l9.301334 0.170667c188.16 14.677333 340.394667 156.672 340.394666 323.925333 0 78.336-38.826667 155.733333-109.653333 222.293334a303.530667 303.530667 0 0 1-7.082667 6.4l9.984 71.082666a49.152 49.152 0 0 1-69.12 58.453334l-98.816-46.421334a582.485333 582.485333 0 0 1-9.472 2.304z m220.16-314.026666c0-131.754667-124.586667-247.978667-279.125333-260.096H821.930667c-3.754667 0-7.68 0.085333-13.994667 0.597333l-10.666667 0.768C631.466667 364.8 503.978667 474.453333 503.978667 608.256c0 18.773333 2.730667 40.874667 7.509333 60.842667 0.597333 2.474667 1.450667 5.632 2.56 9.216l1.706667 4.949333c2.133333 6.570667 4.266667 12.629333 5.632 15.957333 42.325333 105.728 149.930667 173.397333 293.717333 178.176 13.738667 0.512 28.16-1.109333 50.346667-5.12a531.626667 531.626667 0 0 0 16.64-3.242666l5.632-1.28c4.693333-1.109333 8.448-1.962667 19.370666-4.778667a32 32 0 0 1 21.418667 2.133333l85.248 40.106667-9.984-69.290667a32 32 0 0 1 13.909333-31.232c1.194667-0.853333 8.618667-6.912 15.189334-13.056 58.709333-55.210667 89.429333-116.394667 89.429333-175.616z m-1109.333333-237.909334C12.970667 171.52 206.677333 5.376 442.709333 5.376c208.384 0 394.24 130.304 431.872 306.090667 1.28 5.973333 1.28 11.264 0.512 16.896a32 32 0 0 1-63.658666-5.973334C779.178667 179.2 621.482667 69.376 442.709333 69.376 240.042667 69.376 76.970667 209.152 76.970667 378.282667c0 89.941333 46.165333 171.52 136.021333 237.568a32 32 0 0 1 11.434667 35.84l-23.296 69.973333 104.96-48.896a32 32 0 0 1 22.442666-1.706667l5.461334 1.706667c54.357333 11.093333 76.288 14.506667 108.714666 14.506667a200.789333 200.789333 0 0 0 32.256-4.010667c-0.512 0.170667-1.536 0.512-2.730666 1.536a33.109333 33.109333 0 0 1 39.253333 1.109333 32 32 0 0 1 5.376 44.970667c-11.776 14.848-47.36 20.309333-74.24 20.309333-37.12 0-62.037333-3.584-119.893333-15.530666L198.570667 793.6a49.493333 49.493333 0 0 1-68.949334-59.733333l26.88-80.64C62.976 577.706667 12.970667 482.986667 12.970667 378.197333z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M344.576 254.378667a44.373333 44.373333 0 1 1-88.746667 0.085333 44.373333 44.373333 0 0 1 88.746667 0M636.586667 254.378667a44.373333 44.373333 0 1 1-88.746667 0.085333 44.373333 44.373333 0 0 1 88.746667 0"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
                 </button>
               </div>
-              <p className="text-gray-400 text-xs mt-3">
-                {t('footer.wechat')}: HeyBouldering嘿抱
-              </p>
             </div>
           </div>
         </div>
@@ -53,19 +83,19 @@ export default function Footer() {
           onClick={() => setShowWeChatModal(false)}
         >
           <div
-            className="bg-brand-gray-dark rounded-sm p-6 sm:p-8 max-w-sm w-full shadow-2xl border border-brand-orange/30"
+            className="bg-brand-gray-dark rounded-sm p-6 sm:p-8 max-w-sm w-full shadow-2xl border border-brand-pink/30"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="text-center">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
-                {t('footer.wechat')}
-              </h3>
+              <p className="text-xl sm:text-2xl font-bold text-white mb-4">
+                {t("footer.wechat")}
+              </p>
               <p className="text-gray-400 mb-6 text-sm">
-                {t('footer.wechat.scan')}
+                {t("footer.wechat.scan")}
               </p>
 
               {/* QR Code */}
-              <div className="bg-white aspect-square rounded-sm flex items-center justify-center mb-6 shadow-inner border border-brand-orange/20 p-4">
+              <div className="bg-white aspect-square rounded-sm flex items-center justify-center mb-6 shadow-inner border border-brand-pink/20 p-4">
                 <Image
                   src="/assets/service_account_qrcode.jpg"
                   alt="WeChat QR Code"
@@ -76,19 +106,22 @@ export default function Footer() {
               </div>
 
               <p className="text-sm text-gray-400 mb-4">
-                微信号: <span className="font-semibold text-brand-orange">HeyBouldering嘿抱</span>
+                微信号:{" "}
+                <span className="font-semibold text-brand-pink">
+                  HeyBouldering嘿抱
+                </span>
               </p>
 
               <button
                 onClick={() => setShowWeChatModal(false)}
-                className="w-full py-3 bg-brand-orange text-white rounded-sm hover:bg-brand-orange-light transition-colors font-medium"
+                className="w-full py-3 bg-brand-pink text-white rounded-sm hover:bg-brand-pink-light transition-colors font-medium"
               >
-                {t('footer.wechat.close')}
+                {t("footer.wechat.close")}
               </button>
             </div>
           </div>
         </div>
       )}
     </>
-  )
+  );
 }

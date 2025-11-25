@@ -10,6 +10,7 @@ import Image from 'next/image'
 interface Venue {
   id: string
   name: { zh: string; en: string }
+  location: { zh: string; en: string } | null
   imagePlaceholder: string
 }
 
@@ -89,13 +90,13 @@ export default function Navigation({ venues, currentVenueIndex, setCurrentVenueI
                 className="relative py-2 font-medium transition-all duration-300 group"
               >
                 <span className={`text-sm sm:text-base transition-colors ${index === currentVenueIndex
-                  ? 'text-brand-orange'
-                  : 'text-gray-400 group-hover:text-brand-orange'
+                  ? 'text-brand-pink'
+                  : 'text-gray-400 group-hover:text-brand-pink'
                   }`}>
-                  {venue.name[language]}
+                  {venue.name[language]}{venue.location ? ` ${venue.location[language]}` : ''}
                 </span>
                 {/* Animated underline */}
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-brand-orange transition-all duration-300 ${index === currentVenueIndex
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-brand-pink transition-all duration-300 ${index === currentVenueIndex
                   ? 'w-full'
                   : 'w-0 group-hover:w-full'
                   }`}></span>
@@ -112,12 +113,12 @@ export default function Navigation({ venues, currentVenueIndex, setCurrentVenueI
             >
               <span className={`text-sm sm:text-base transition-colors ${
                 pathname === '/photos'
-                  ? 'text-brand-orange'
-                  : 'text-gray-400 group-hover:text-brand-orange'
+                  ? 'text-brand-pink'
+                  : 'text-gray-400 group-hover:text-brand-pink'
               }`}>
                 {t('nav.photos')}
               </span>
-              <span className={`absolute bottom-0 left-0 h-0.5 bg-brand-orange transition-all duration-300 ${
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-brand-pink transition-all duration-300 ${
                 pathname === '/photos'
                   ? 'w-full'
                   : 'w-0 group-hover:w-full'
@@ -131,12 +132,12 @@ export default function Navigation({ venues, currentVenueIndex, setCurrentVenueI
             >
               <span className={`text-sm sm:text-base transition-colors ${
                 pathname === '/pricing'
-                  ? 'text-brand-orange'
-                  : 'text-gray-400 group-hover:text-brand-orange'
+                  ? 'text-brand-pink'
+                  : 'text-gray-400 group-hover:text-brand-pink'
               }`}>
                 {t('nav.pricing')}
               </span>
-              <span className={`absolute bottom-0 left-0 h-0.5 bg-brand-orange transition-all duration-300 ${
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-brand-pink transition-all duration-300 ${
                 pathname === '/pricing'
                   ? 'w-full'
                   : 'w-0 group-hover:w-full'
@@ -153,7 +154,7 @@ export default function Navigation({ venues, currentVenueIndex, setCurrentVenueI
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-gray-300 hover:text-brand-orange transition-colors"
+              className="md:hidden p-2 text-gray-300 hover:text-brand-pink transition-colors"
               aria-label="Toggle menu"
             >
               <svg
@@ -182,7 +183,7 @@ export default function Navigation({ venues, currentVenueIndex, setCurrentVenueI
               {/* Activity Calendar Link */}
               <Link
                 href="/calendar"
-                className={`text-left px-4 py-2 hover:text-brand-orange hover:bg-brand-gray-medium transition-all font-medium rounded-sm ${pathname === '/calendar' ? 'text-brand-orange bg-brand-gray-medium' : 'text-gray-300'
+                className={`text-left px-4 py-2 hover:text-brand-pink hover:bg-brand-gray-medium transition-all font-medium rounded-sm ${pathname === '/calendar' ? 'text-brand-pink bg-brand-gray-medium' : 'text-gray-300'
                   }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >

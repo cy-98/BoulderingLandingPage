@@ -3,96 +3,110 @@
     {
       "id": "venue1",
       "name": {
-        "zh": "嘿抱外滩",
-        "en": "HeyBouldering Bund"
+        "zh": "嘿抱",
+        "en": "Hey Bouldering"
+      },
+      "location": {
+        "zh": "外滩",
+        "en": "The Bund"
       },
       "address": {
         "zh": "中山南路800弄21号绿地外滩潮方LG2-204号",
         "en": "No. LG2-204, Chaofang, No. 21, Lane 800, Zhongshan South Road"
       },
+      "mapLink": "https://maps.apple.com/place?address=Zhongshan%20South%20Road%20800%20Long%20No.21%20Greenland%20Waitan%20Chaofang%20LG204%20Store,%20Huangpu,%20Shanghai%20China&coordinate=31.214669,121.505755&name=HEY%20BOULDERING%20Heibao%20Panyan%20(Greenland%20Waitan%20Central%20Branch)&place-id=H2710I3F96E5B16AE1B&map=h",
       "hours": {
-        "zh": "周一至周日 10:00-22:00",
-        "en": "Mon-Sun 10:00-22:00"
+        "zh": "周日 - 周四 10:00-22:00, 周五 - 周六 & 节假日 10:00-00:00",
+        "en": "Sunday-Thursday 10:00-22:00, Friday-Saturday & holidays 10:00-00:00"
       },
       "phone": "17621132671",
       "imagePlaceholder": "🧗",
-      "image": "/assets/bd1.jpg",
+      "image": "/assets/bund/bd4.jpg",
+      "mapImage": "/assets/map/bund.jpg",
       "photos": [
-        "/assets/bd1.jpg",
-        "/assets/bd2.jpg",
-        "/assets/HHH02307.JPG",
-        "/assets/HHH02314.JPG",
-        "/assets/HHH02329.JPG",
-        "/assets/HHH02336.JPG",
-        "/assets/HHH02338.JPG",
-        "/assets/HHH02342.JPG",
-        "/assets/HHH02434.JPG",
-        "/assets/HHH02441.JPG",
-        "/assets/HHH02451.JPG",
-        "/assets/HHH02453.JPG",
-        "/assets/HHH02459.JPG",
-        "/assets/HHH02461.JPG"
+        "/assets/bund/bd4.jpg"
       ],
-      "facilities": ["freeParking"]
+      "facilities": ["freeParking", "sprayWall"]
     },
     {
       "id": "venue2",
       "name": {
-        "zh": "嘿抱万象城",
-        "en": "HeyBouldering MixC"
+        "zh": "嘿抱",
+        "en": "Hey Bouldering"
+      },
+      "location": {
+        "zh": "万象城",
+        "en": "MixC"
       },
       "address": {
         "zh": "上海市闵行区吴中路1599号上海万象城 L339C",
         "en": "L339C, Shanghai MixC, No. 1599, Wuzhong Road, Minhang District, Shanghai"
       },
+      "mapLink": "https://maps.apple.com/place?address=Wuzhong%20Road%20No.1599%20(Ziteng%20Rd.%20Subway%20Station%20Entrance%20%26%20Exit%201%20Pedestrian%20210%20Meters),%20Minhang,%20Shanghai%20China&coordinate=31.169472,121.367874&name=Shanghai%20the%20Mixc&place-id=H2710I3F80D8CFB0AAE&map=h",
       "hours": {
         "zh": "周一至周日 10:00-22:00",
         "en": "Mon-Sun 10:00-22:00"
       },
       "phone": "17621132671",
       "imagePlaceholder": "💪",
-      "image": "/assets/bd2.jpg",
+      "image": "/assets/mixc/bd1.jpg",
+      "mapImage": "/assets/map/mixc.jpg",
       "photos": [
-        "/assets/bd3.jpg",
-        "/assets/bd4.jpg",
-        "/assets/HHH02466.JPG",
-        "/assets/HHH02553.JPG",
-        "/assets/HHH02556.JPG",
-        "/assets/HHH02575.JPG",
-        "/assets/HHH02581.JPG",
-        "/assets/HHH02588.JPG"
+        "/assets/mixc/bd1.jpg"
       ],
-      "facilities": ["restroom", "shower", "training"]
+      "facilities": ["shower", "tboard"]
     },
     {
       "id": "venue3",
       "name": {
         "zh": "粉抱",
-        "en": "PinkBouldering"
+        "en": "Pink Bouldering"
       },
+      "location": null,
       "address": {
         "zh": "上海市普陀区宁夏路777号D区2楼",
         "en": "2nd Floor, Area D, No. 777, Ningxia Road, Putuo District, Shanghai"
       },
+      "mapLink": "https://maps.apple.com/?address=No.777,%20Ningxia%20Road%20D%20Unit%20Building%202%20(Jinshajiang%20Road%20Subway%20Station%20Entrance%20%26%20Exit%205%20Pedestrian%20130%20Meters),%20Putuo,%20Shanghai%20China&auid=1118808417445099&ll=31.230313,121.411722&lsp=57879&q=PINK%20BOULDERING%20Fenbao%20Climbing%20Gym&t=m",
       "hours": {
-        "zh": "周一至周日 09:00-22:00",
-        "en": "Mon-Sun 09:00-22:00"
+        "zh": "周一至周日 07:30-22:00",
+        "en": "Mon-Sun 07:30-22:00"
       },
       "phone": "17621132671",
       "imagePlaceholder": "🌸",
-      "image": "/assets/image.png",
+      "image": "/assets/pink/bd2.jpg",
+      "mapImage": "/assets/map/pink.jpg",
       "photos": [
-        "/assets/image.png",
-        "/assets/HHH02595.JPG",
-        "/assets/HHH02596.JPG",
-        "/assets/HHH02624.JPG",
-        "/assets/HHH02633.JPG",
-        "/assets/HHH02636.JPG",
-        "/assets/HHH02651.JPG",
-        "/assets/HHH02667.JPG",
-        "/assets/HHH02729.JPG"
+        "/assets/pink/bd2.jpg",
+        "/assets/pink/bd3.jpg",
+        "/assets/pink/HHH02307.JPG",
+        "/assets/pink/HHH02314.JPG",
+        "/assets/pink/HHH02329.JPG",
+        "/assets/pink/HHH02336.JPG",
+        "/assets/pink/HHH02338.JPG",
+        "/assets/pink/HHH02342.JPG",
+        "/assets/pink/HHH02434.JPG",
+        "/assets/pink/HHH02441.JPG",
+        "/assets/pink/HHH02451.JPG",
+        "/assets/pink/HHH02453.JPG",
+        "/assets/pink/HHH02459.JPG",
+        "/assets/pink/HHH02461.JPG",
+        "/assets/pink/HHH02466.JPG",
+        "/assets/pink/HHH02553.JPG",
+        "/assets/pink/HHH02556.JPG",
+        "/assets/pink/HHH02575.JPG",
+        "/assets/pink/HHH02581.JPG",
+        "/assets/pink/HHH02588.JPG",
+        "/assets/pink/HHH02595.JPG",
+        "/assets/pink/HHH02596.JPG",
+        "/assets/pink/HHH02624.JPG",
+        "/assets/pink/HHH02633.JPG",
+        "/assets/pink/HHH02636.JPG",
+        "/assets/pink/HHH02651.JPG",
+        "/assets/pink/HHH02667.JPG",
+        "/assets/pink/HHH02729.JPG"
       ],
-      "facilities": ["training"]
+      "facilities": ["tboard", "shower"]
     }
   ]
 }

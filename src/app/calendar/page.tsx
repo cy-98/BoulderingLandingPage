@@ -70,20 +70,20 @@ export default function CalendarPage() {
             {filteredEvents.map((event) => (
               <div
                 key={event.id}
-                className="bg-brand-gray-dark rounded-sm shadow-lg hover:shadow-2xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-brand-orange"
+                className="bg-brand-gray-dark rounded-sm shadow-lg hover:shadow-2xl transition-all duration-300 p-6 sm:p-8 border-l-4 border-brand-pink"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
                       <span className={`inline-flex items-center px-4 py-2 rounded-sm text-sm font-semibold ${
                         event.type === 'routeSetting'
-                          ? 'bg-brand-orange/20 text-brand-orange border border-brand-orange/30'
+                          ? 'bg-brand-pink/20 text-brand-pink border border-brand-pink/30'
                           : 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
                       }`}>
                         {event.type === 'routeSetting' ? '🔧 ' : '🎉 '}
                         {t(`calendar.${event.type}`)}
                       </span>
-                      <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-brand-orange/20 text-brand-orange border border-brand-orange/30">
+                      <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-brand-pink/20 text-brand-pink border border-brand-pink/30">
                         📍 {venueNames[event.venue]?.[language] || event.venue}
                       </span>
                     </div>
@@ -95,7 +95,7 @@ export default function CalendarPage() {
                     </p>
                   </div>
                   <div className="text-left sm:text-right">
-                    <p className="text-4xl sm:text-5xl font-bold text-brand-orange">
+                    <p className="text-4xl sm:text-5xl font-bold text-brand-pink">
                       {new Date(event.date).getDate()}
                     </p>
                     <p className="text-base text-gray-400 mt-1">

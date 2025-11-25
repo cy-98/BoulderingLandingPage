@@ -2,11 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Custom SCHABO Font */
+@font-face {
+  font-family: 'SCHABO';
+  src: url('/fonts/SCHABO-Condensed.woff2') format('woff2'),
+       url('/fonts/SCHABO-Condensed.woff') format('woff'),
+       url('/fonts/SCHABO-Condensed.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom Shuttleblock Font */
+@font-face {
+  font-family: 'Shuttleblock';
+  src: url('/fonts/ShuttleblockTest-NarrowBold-BF65e13bca7fa92.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 10, 10, 10;
-  --brand-orange: #FF8C00;
-  --brand-orange-light: #FFB84D;
+  --brand-pink: #FF8C00;
+  --brand-pink-light: #FFB84D;
   --brand-gray: #1a1a1a;
 }
 
@@ -16,6 +38,25 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Heading styles with Shuttleblock font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Shuttleblock', sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Button and link styles */
+button, a {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 /* Smooth scrolling for anchor links */
@@ -79,16 +120,16 @@ html {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--brand-orange);
+  background: var(--brand-pink);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: var(--brand-orange-light);
+  background: var(--brand-pink-light);
 }
 
 /* Firefox scrollbar */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: var(--brand-orange) rgba(255, 255, 255, 0.05);
+  scrollbar-color: var(--brand-pink) rgba(255, 255, 255, 0.05);
 }

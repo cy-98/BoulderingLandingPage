@@ -58,8 +58,8 @@ export default function Calendar() {
                 onClick={() => setSelectedFilter('all')}
                 className={`px-4 py-2 rounded-sm text-sm font-medium transition-all duration-300 ${
                   selectedFilter === 'all'
-                    ? 'bg-brand-orange text-white shadow-lg'
-                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-orange border-2 border-brand-gray-light/20'
+                    ? 'bg-brand-pink text-white shadow-lg'
+                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-pink border-2 border-brand-gray-light/20'
                 }`}
               >
                 {t('calendar.filter.all')}
@@ -68,8 +68,8 @@ export default function Calendar() {
                 onClick={() => setSelectedFilter('routeSetting')}
                 className={`px-4 py-2 rounded-sm text-sm font-medium transition-all duration-300 ${
                   selectedFilter === 'routeSetting'
-                    ? 'bg-brand-orange text-white shadow-lg'
-                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-orange border-2 border-brand-gray-light/20'
+                    ? 'bg-brand-pink text-white shadow-lg'
+                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-pink border-2 border-brand-gray-light/20'
                 }`}
               >
                 🔧 {t('calendar.filter.routeSetting')}
@@ -78,8 +78,8 @@ export default function Calendar() {
                 onClick={() => setSelectedFilter('event')}
                 className={`px-4 py-2 rounded-sm text-sm font-medium transition-all duration-300 ${
                   selectedFilter === 'event'
-                    ? 'bg-brand-orange text-white shadow-lg'
-                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-orange border-2 border-brand-gray-light/20'
+                    ? 'bg-brand-pink text-white shadow-lg'
+                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-pink border-2 border-brand-gray-light/20'
                 }`}
               >
                 🎉 {t('calendar.filter.events')}
@@ -95,8 +95,8 @@ export default function Calendar() {
                 onClick={() => setSelectedVenue('all')}
                 className={`px-4 py-2 rounded-sm text-sm font-medium transition-all duration-300 ${
                   selectedVenue === 'all'
-                    ? 'bg-brand-orange text-white shadow-lg'
-                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-orange border-2 border-brand-gray-light/20'
+                    ? 'bg-brand-pink text-white shadow-lg'
+                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-pink border-2 border-brand-gray-light/20'
                 }`}
               >
                 {t('venues.filter.all')}
@@ -105,8 +105,8 @@ export default function Calendar() {
                 onClick={() => setSelectedVenue('guomao')}
                 className={`px-4 py-2 rounded-sm text-sm font-medium transition-all duration-300 ${
                   selectedVenue === 'guomao'
-                    ? 'bg-brand-orange text-white shadow-lg'
-                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-orange border-2 border-brand-gray-light/20'
+                    ? 'bg-brand-pink text-white shadow-lg'
+                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-pink border-2 border-brand-gray-light/20'
                 }`}
               >
                 {language === 'zh' ? '嘿抱' : 'Guomao'}
@@ -115,8 +115,8 @@ export default function Calendar() {
                 onClick={() => setSelectedVenue('sanlitun')}
                 className={`px-4 py-2 rounded-sm text-sm font-medium transition-all duration-300 ${
                   selectedVenue === 'sanlitun'
-                    ? 'bg-brand-orange text-white shadow-lg'
-                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-orange border-2 border-brand-gray-light/20'
+                    ? 'bg-brand-pink text-white shadow-lg'
+                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-pink border-2 border-brand-gray-light/20'
                 }`}
               >
                 {language === 'zh' ? '嘿抱2' : 'Sanlitun'}
@@ -125,8 +125,8 @@ export default function Calendar() {
                 onClick={() => setSelectedVenue('wangjing')}
                 className={`px-4 py-2 rounded-sm text-sm font-medium transition-all duration-300 ${
                   selectedVenue === 'wangjing'
-                    ? 'bg-brand-orange text-white shadow-lg'
-                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-orange border-2 border-brand-gray-light/20'
+                    ? 'bg-brand-pink text-white shadow-lg'
+                    : 'bg-brand-gray-dark text-gray-400 hover:bg-brand-gray-dark hover:text-brand-pink border-2 border-brand-gray-light/20'
                 }`}
               >
                 {language === 'zh' ? '粉抱' : 'Wangjing'}
@@ -140,20 +140,20 @@ export default function Calendar() {
           {filteredEvents.map((event) => (
             <div
               key={event.id}
-              className="bg-brand-gray-dark rounded-sm shadow-lg hover:shadow-2xl transition-all duration-300 p-5 sm:p-6 border-l-4 border-brand-orange"
+              className="bg-brand-gray-dark rounded-sm shadow-lg hover:shadow-2xl transition-all duration-300 p-5 sm:p-6 border-l-4 border-brand-pink"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
                     <span className={`inline-flex items-center px-3 py-1 rounded-sm text-xs font-semibold ${
                       event.type === 'routeSetting'
-                        ? 'bg-brand-orange/20 text-brand-orange border border-brand-orange/30'
+                        ? 'bg-brand-pink/20 text-brand-pink border border-brand-pink/30'
                         : 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
                     }`}>
                       {event.type === 'routeSetting' ? '🔧 ' : '🎉 '}
                       {t(`calendar.${event.type}`)}
                     </span>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-orange/20 text-brand-orange border border-brand-orange/30">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-pink/20 text-brand-pink border border-brand-pink/30">
                       📍 {venueNames[event.venue]?.[language] || event.venue}
                     </span>
                   </div>
@@ -165,7 +165,7 @@ export default function Calendar() {
                   </p>
                 </div>
                 <div className="text-left sm:text-right">
-                  <p className="text-2xl sm:text-3xl font-bold text-brand-orange">
+                  <p className="text-2xl sm:text-3xl font-bold text-brand-pink">
                     {new Date(event.date).getDate()}
                   </p>
                   <p className="text-sm text-gray-400">

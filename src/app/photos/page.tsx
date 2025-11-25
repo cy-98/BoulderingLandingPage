@@ -102,7 +102,7 @@ export default function PhotosPage() {
                 </div>
                 {/* Selected indicator */}
                 {selectedPhotoIndex === index && (
-                  <div className="absolute inset-0 border-4 border-brand-orange animate-pulse"></div>
+                  <div className="absolute inset-0 border-4 border-brand-pink animate-pulse"></div>
                 )}
               </div>
             ))}
@@ -125,7 +125,7 @@ export default function PhotosPage() {
                 onClick={() => scrollToPhoto(index)}
                 className={`flex-shrink-0 relative group transition-all duration-300 ${
                   selectedPhotoIndex === index
-                    ? 'ring-2 ring-brand-orange scale-110'
+                    ? 'ring-2 ring-brand-pink scale-110'
                     : 'hover:scale-105'
                 }`}
               >

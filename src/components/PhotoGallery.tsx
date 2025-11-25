@@ -92,7 +92,7 @@ export default function PhotoGallery({ venues, currentVenueIndex }: PhotoGallery
         {/* Image Counter - Top Right Corner */}
         <div className="absolute top-24 sm:top-28 right-4 sm:right-6 lg:right-8 z-20">
           <div className="bg-black/50 backdrop-blur-sm px-4 py-2 rounded-sm">
-            <span className="text-brand-orange font-bold text-lg">
+            <span className="text-brand-pink font-bold text-lg">
               {currentPhotoIndex + 1}
             </span>
             <span className="text-white/70 text-sm"> / {galleryImages.length}</span>
@@ -107,7 +107,7 @@ export default function PhotoGallery({ venues, currentVenueIndex }: PhotoGallery
               onClick={() => setCurrentPhotoIndex(index)}
               className={`transition-all duration-300 cursor-pointer ${
                 index === currentPhotoIndex
-                  ? 'w-12 h-0.5 bg-brand-orange shadow-md'
+                  ? 'w-12 h-0.5 bg-brand-pink shadow-md'
                   : 'w-12 h-0.5 bg-white/40 hover:bg-white/60'
               }`}
               aria-label={`Go to photo ${index + 1}`}

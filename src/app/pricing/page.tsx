@@ -92,11 +92,11 @@ export default function PricingPage() {
                 <div
                   key={plan.id}
                   className={`relative bg-brand-gray-dark rounded-sm shadow-lg hover:shadow-2xl transition-all duration-300 p-8 ${
-                    plan.popular ? 'ring-4 ring-brand-orange transform scale-105' : ''
+                    plan.popular ? 'ring-4 ring-brand-pink transform scale-105' : ''
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute top-0 right-0 bg-brand-orange text-white px-4 py-1 text-sm font-bold rounded-bl-sm rounded-tr-sm">
+                    <div className="absolute top-0 right-0 bg-brand-pink text-white px-4 py-1 text-sm font-bold rounded-bl-sm rounded-tr-sm">
                       {language === 'zh' ? '最受欢迎' : 'Popular'}
                     </div>
                   )}
@@ -106,7 +106,7 @@ export default function PricingPage() {
                       {t(`pricing.${plan.type}`)}
                     </h3>
                     <div className="mb-4">
-                      <span className="text-5xl font-bold text-brand-orange">
+                      <span className="text-5xl font-bold text-brand-pink">
                         {plan.price[language]}
                       </span>
                     </div>
@@ -118,7 +118,7 @@ export default function PricingPage() {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-3 text-gray-300">
-                        <span className="text-brand-orange text-xl mt-0.5">✓</span>
+                        <span className="text-brand-pink text-xl mt-0.5">✓</span>
                         <span>{feature[language]}</span>
                       </li>
                     ))}
@@ -146,7 +146,7 @@ export default function PricingPage() {
                         {course.duration[language]}
                       </h3>
                       <div className="mb-4">
-                        <span className="text-3xl font-bold text-brand-orange">
+                        <span className="text-3xl font-bold text-brand-pink">
                           {course.price[language]}
                         </span>
                       </div>
@@ -175,7 +175,7 @@ export default function PricingPage() {
                         {rental.duration[language]}
                       </h3>
                       <div className="mb-4">
-                        <span className="text-3xl font-bold text-brand-orange">
+                        <span className="text-3xl font-bold text-brand-pink">
                           {rental.price[language]}
                         </span>
                       </div>

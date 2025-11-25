@@ -35,6 +35,7 @@ const translations = {
     'venue.facility.training': 'T板训练区',
     'venue.facility.tboard': 'T板训练区',
     'venue.facility.freeParking': '免费停车',
+    'venue.facility.sprayWall': 'Spray Wall',
     'venue.viewDetails': '查看详情',
     
     // Venue Details (Sample data)
@@ -131,12 +132,13 @@ const translations = {
     'venue.facility.training': 'Training Board',
     'venue.facility.tboard': 'Tension Board',
     'venue.facility.freeParking': 'Free Parking',
+    'venue.facility.sprayWall': 'Spray Wall',
     'venue.viewDetails': 'View Details',
     
     // Venue Details (Sample data)
     'venue1.name': 'Hey Bao',
     'venue1.address': 'No.1 Jianguomenwai Ave, Chaoyang District, Beijing',
-    'venue1.hours': 'Mon-Sun 10:00-22:00',
+    'venue1.hours': 'Sunday - Thursday 10:00-22:00, Friday - Saturday 10:00-00:00',
     'venue1.phone': '010-8888-8888',
     
     'venue2.name': 'Hey Bao 2',
@@ -208,7 +210,7 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('zh')
+  const [language, setLanguageState] = useState<Language>('en')
 
   useEffect(() => {
     // Load saved language preference from localStorage

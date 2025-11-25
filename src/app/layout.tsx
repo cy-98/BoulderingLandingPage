@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN">
-      <body>
+      <body className="font-sans antialiased">
         <LanguageProvider>
           {children}
         </LanguageProvider>
